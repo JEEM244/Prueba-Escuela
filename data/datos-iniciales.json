@@ -1,0 +1,194 @@
+{
+  "usuarios": [
+    {
+      "id": "u1",
+      "nombre": "Administrador",
+      "email": "admin@test.com",
+      "password": "123456",
+      "rol": "ADMIN",
+      "activo": true
+    },
+    {
+      "id": "u2",
+      "nombre": "Ana Alumna",
+      "email": "alumno@test.com",
+      "password": "123456",
+      "rol": "ALUMNO",
+      "activo": true,
+      "alumnoId": "a1"
+    },
+    {
+      "id": "u3",
+      "nombre": "Carlos Tutor",
+      "email": "padre@test.com",
+      "password": "123456",
+      "rol": "PADRE",
+      "activo": true,
+      "hijos": [
+        "a1",
+        "a2"
+      ]
+    },
+    {
+      "id": "u4",
+      "nombre": "Sofía Soporte",
+      "email": "soporte@test.com",
+      "password": "123456",
+      "rol": "SOPORTE",
+      "activo": true
+    }
+  ],
+  "alumnos": [
+    {
+      "id": "a1",
+      "nombre": "Ana Alumna",
+      "grupo": "3°A",
+      "grado": "3°",
+      "padreId": "u3"
+    },
+    {
+      "id": "a2",
+      "nombre": "Luis Alumno",
+      "grupo": "1°B",
+      "grado": "1°",
+      "padreId": "u3"
+    }
+  ],
+  "padres": [
+    {
+      "id": "u3",
+      "nombre": "Carlos Tutor",
+      "hijos": [
+        "a1",
+        "a2"
+      ]
+    }
+  ],
+  "tareas": [
+    {
+      "id": "t1",
+      "alumnoId": "a1",
+      "titulo": "Ejercicios de Física",
+      "materia": "Física",
+      "fecha": "2026-09-18",
+      "completada": false
+    },
+    {
+      "id": "t2",
+      "alumnoId": "a1",
+      "titulo": "Cuadro sinóptico",
+      "materia": "Desarrollo Web",
+      "fecha": "2026-09-19",
+      "completada": false
+    },
+    {
+      "id": "t3",
+      "alumnoId": "a1",
+      "titulo": "Reporte PISA",
+      "materia": "Naturaleza de la Vida",
+      "fecha": "2026-09-22",
+      "completada": true
+    }
+  ],
+  "materias": [
+    {
+      "id": "m1",
+      "nombre": "Física",
+      "grupo": "3°A",
+      "docente": "Prof. Ricardo"
+    },
+    {
+      "id": "m2",
+      "nombre": "Desarrollo Web",
+      "grupo": "3°A",
+      "docente": "Prof. Juan"
+    },
+    {
+      "id": "m3",
+      "nombre": "Naturaleza de la Vida",
+      "grupo": "3°A",
+      "docente": "Mtra. Gloria"
+    },
+    {
+      "id": "m4",
+      "nombre": "Probabilidad y Estadística",
+      "grupo": "3°A",
+      "docente": "Prof. Daniel"
+    }
+  ],
+  "plataformas": [
+    {
+      "id": "p1",
+      "nombre": "SIASE",
+      "url": "https://www.uanl.mx/",
+      "descripcion": "Acceso a servicios escolares de la UANL."
+    },
+    {
+      "id": "p2",
+      "nombre": "Google Classroom",
+      "url": "https://classroom.google.com/",
+      "descripcion": "Cursos y actividades."
+    },
+    {
+      "id": "p3",
+      "nombre": "Microsoft Teams",
+      "url": "https://teams.microsoft.com/",
+      "descripcion": "Clases y comunicación."
+    }
+  ],
+  "reportes": [
+    {
+      "id": "r001",
+      "ubicacion": "Aula 118M",
+      "descripcion": "El proyector no funciona.",
+      "usuarioId": "u2",
+      "fecha": "2026-09-14",
+      "estado": "PENDIENTE",
+      "comentarios": [
+        "Reporte creado por Ana."
+      ]
+    },
+    {
+      "id": "r002",
+      "ubicacion": "Laboratorio 2",
+      "descripcion": "Una computadora no enciende.",
+      "usuarioId": "u2",
+      "fecha": "2026-09-13",
+      "estado": "EN_PROCESO",
+      "comentarios": [
+        "Se revisará la fuente de poder."
+      ]
+    }
+  ],
+  "avisos": [
+    {
+      "id": "av1",
+      "titulo": "Mantenimiento programado",
+      "texto": "El sábado habrá mantenimiento general de red.",
+      "fecha": "2026-09-16"
+    },
+    {
+      "id": "av2",
+      "titulo": "Entrega de actividades",
+      "texto": "Recuerda revisar las fechas de tus tareas.",
+      "fecha": "2026-09-15"
+    }
+  ],
+  "eventos": [
+    {
+      "id": "e1",
+      "titulo": "Entrega Física",
+      "fecha": "2026-09-18"
+    },
+    {
+      "id": "e2",
+      "titulo": "Actividad Desarrollo Web",
+      "fecha": "2026-09-19"
+    },
+    {
+      "id": "e3",
+      "titulo": "Reporte PISA",
+      "fecha": "2026-09-22"
+    }
+  ]
+}

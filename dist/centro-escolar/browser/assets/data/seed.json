@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    { "id": "u1", "nombre": "Administrador", "email": "admin@test.com", "password": "123456", "rol": "ADMIN", "activo": true },
+    { "id": "u2", "nombre": "Ana Alumna", "email": "alumno@test.com", "password": "123456", "rol": "ALUMNO", "activo": true, "alumnoId": "a1" },
+    { "id": "u3", "nombre": "Carlos Tutor", "email": "padre@test.com", "password": "123456", "rol": "PADRE", "activo": true, "hijos": ["a1", "a2"] },
+    { "id": "u4", "nombre": "Sofía Soporte", "email": "soporte@test.com", "password": "123456", "rol": "SOPORTE", "activo": true }
+  ],
+  "alumnos": [
+    { "id": "a1", "nombre": "Ana Alumna", "grupo": "3°A", "grado": "3°", "padreId": "u3" },
+    { "id": "a2", "nombre": "Luis Alumno", "grupo": "1°B", "grado": "1°", "padreId": "u3" }
+  ],
+  "padres": [{ "id": "u3", "nombre": "Carlos Tutor", "hijos": ["a1", "a2"] }],
+  "tareas": [
+    { "id": "t1", "alumnoId": "a1", "titulo": "Ejercicios de Física", "descripcion": "Resolver ejercicios 1 al 10.", "materia": "Física", "fecha": "2026-09-18", "prioridad": "ALTA", "estado": "PENDIENTE", "fechaCreacion": "2026-09-12" },
+    { "id": "t2", "alumnoId": "a1", "titulo": "Cuadro sinóptico", "descripcion": "Preparar el cuadro de la unidad 2.", "materia": "Desarrollo Web", "fecha": "2026-09-19", "prioridad": "MEDIA", "estado": "EN_PROGRESO", "fechaCreacion": "2026-09-13" },
+    { "id": "t3", "alumnoId": "a1", "titulo": "Reporte PISA", "descripcion": "Entregar reporte final.", "materia": "Naturaleza de la Vida", "fecha": "2026-09-22", "prioridad": "BAJA", "estado": "COMPLETADA", "fechaCreacion": "2026-09-10" }
+  ],
+  "materias": [
+    { "id": "m1", "nombre": "Física", "profesor": "Prof. Ricardo", "grupo": "3°A", "horario": "Lun y Mié · 08:00", "aula": "118M" },
+    { "id": "m2", "nombre": "Desarrollo Web", "profesor": "Prof. Juan", "grupo": "3°A", "horario": "Mar y Jue · 10:00", "aula": "Lab 2" },
+    { "id": "m3", "nombre": "Naturaleza de la Vida", "profesor": "Mtra. Gloria", "grupo": "3°A", "horario": "Vie · 09:00", "aula": "204" },
+    { "id": "m4", "nombre": "Probabilidad y Estadística", "profesor": "Prof. Daniel", "grupo": "3°A", "horario": "Lun · 12:00", "aula": "112" }
+  ],
+  "plataformas": [
+    { "id": "p1", "nombre": "SIASE", "url": "https://www.uanl.mx/", "descripcion": "Servicios escolares de la UANL.", "tipo": "Escolar" },
+    { "id": "p2", "nombre": "Google Classroom", "url": "https://classroom.google.com/", "descripcion": "Cursos y actividades.", "tipo": "Clases" },
+    { "id": "p3", "nombre": "Microsoft Teams", "url": "https://teams.microsoft.com/", "descripcion": "Clases y comunicación.", "tipo": "Comunicación" },
+    { "id": "p4", "nombre": "Moodle", "url": "https://moodle.org/", "descripcion": "Aula virtual.", "tipo": "Aula virtual" }
+  ],
+  "reportes": [
+    { "id": "r001", "ubicacion": "Aula 118M", "descripcion": "El proyector no funciona.", "usuarioId": "u2", "fecha": "2026-09-14", "estado": "PENDIENTE", "comentarios": ["Reporte creado por Ana."] },
+    { "id": "r002", "ubicacion": "Laboratorio 2", "descripcion": "Una computadora no enciende.", "usuarioId": "u2", "fecha": "2026-09-13", "estado": "EN_PROCESO", "comentarios": ["Se revisará la fuente de poder."] }
+  ],
+  "avisos": [
+    { "id": "av1", "titulo": "Mantenimiento programado", "contenido": "El sábado habrá mantenimiento general de red.", "fecha": "2026-09-16", "importancia": "MEDIA", "autor": "Administración" },
+    { "id": "av2", "titulo": "Entrega de actividades", "contenido": "Recuerda revisar las fechas de tus tareas.", "fecha": "2026-09-15", "importancia": "ALTA", "autor": "Administración" }
+  ],
+  "eventos": [
+    { "id": "e1", "titulo": "Entrega Física", "fecha": "2026-09-18", "tipo": "Entrega", "alumnoId": "a1" },
+    { "id": "e2", "titulo": "Actividad Desarrollo Web", "fecha": "2026-09-19", "tipo": "Tarea", "alumnoId": "a1" },
+    { "id": "e3", "titulo": "Reporte PISA", "fecha": "2026-09-22", "tipo": "Entrega", "alumnoId": "a1" }
+  ]
+}
