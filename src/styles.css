@@ -119,3 +119,58 @@ th { font-size: .7rem; } th, td { padding: 16px 12px; } td { font-size: .9rem; }
 body { font-size: 16px; }
 .content { width: 100%; max-width: none; }
 @media (min-width: 1201px) { .content { padding-left: clamp(36px, 3.2vw, 64px); padding-right: clamp(36px, 3.2vw, 64px); } .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } .dashboard-grid { grid-template-columns: minmax(0, 1.35fr) minmax(360px, .65fr); } }
+
+
+/* Estilo general del prototipo escolar: sencillo, legible y con controles claros. */
+:root {
+  --ink: #24384b;
+  --muted: #68798a;
+  --line: #d8e0e7;
+  --surface: #ffffff;
+  --wash: #f2f5f8;
+  --accent: #356b91;
+  --danger: #a74843;
+}
+body { background: var(--wash); color: var(--ink); font-family: "Segoe UI", Arial, sans-serif; }
+.login-page {
+  background: #f2f5f8;
+  gap: clamp(32px, 6vw, 88px);
+}
+.brand-mark {
+  border-radius: 7px;
+  background: #294e6a;
+  box-shadow: none;
+}
+.eyebrow, .panel-top, .demo-heading { font-family: "Segoe UI", Arial, sans-serif; letter-spacing: .06em; }
+h1 { font-size: clamp(2.2rem, 4.2vw, 3.7rem); line-height: 1.06; letter-spacing: -.045em; }
+h1 em { color: #356b91; }
+.intro-copy { color: #667789; font-size: 1rem; line-height: 1.65; }
+.login-panel {
+  border-radius: 8px;
+  border-color: #d8e0e7;
+  box-shadow: 0 5px 18px #24384b0b;
+  backdrop-filter: none;
+  background: #fff;
+}
+.panel-top { margin-bottom: 30px; color: #587b96; }
+input, select, textarea { border-radius: 5px; }
+input:focus, select:focus, textarea:focus { border-color: #628aa8; box-shadow: 0 0 0 2px #356b911c; }
+.submit, .primary-btn { border-radius: 5px; background: #315e80; }
+.submit:hover:not(:disabled), .primary-btn:hover { background: #264d6a; transform: none; }
+.demo { border-radius: 5px; }
+.demo:hover { background: #f3f6f8; border-color: #d8e0e7; }
+.sidebar { background: #fff; border-right-color: #d8e0e7; }
+.nav-btn { border-radius: 5px; }
+.nav-btn:hover, .nav-btn.active { background: #eaf0f5; color: #294e6a; }
+.welcome { border-radius: 7px; background: #eaf0f5; }
+.date-pill { border-radius: 5px; }
+.stat, .card, .subject-card, .platform-card { border-radius: 7px; box-shadow: none; }
+.badge { border-radius: 4px; }
+.inline-form { border-radius: 6px; }
+.calendar-day { border-radius: 4px; }
+.icon-btn { border-radius: 4px; }
+.dark .sidebar, .dark .topbar, .dark .card, .dark .stat, .dark .subject-card, .dark .platform-card { border-color: #344754; }
+@media (max-width: 850px) {
+  .login-page { grid-template-columns: 1fr; gap: 30px; }
+  .brand-mark { margin-bottom: 25px; }
+}
